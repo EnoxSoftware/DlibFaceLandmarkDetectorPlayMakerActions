@@ -792,7 +792,7 @@ MonoBehaviour:
         actionEnabled: 01
         actionIsOpen: 01
         actionStartIndex: 00000000
-        actionHashCodes: 92de7404
+        actionHashCodes: 3df26a04
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -864,7 +864,13 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
-        fsmBoolParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
@@ -878,17 +884,18 @@ MonoBehaviour:
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 29000000100000001000000017000000170000002700000010000000
+        paramDataType: 2900000010000000100000001700000011000000170000002700000010000000
         paramName:
         - array
         - startIndex
         - endIndex
         - loopEvent
+        - resetFlag
         - finishedEvent
         - result
         - currentIndex
-        paramDataPos: 00000000000000000100000000000000010000000000000002000000
-        paramByteDataSize: 00000000000000000000000000000000000000000000000000000000
+        paramDataPos: 0000000000000000010000000000000000000000010000000000000002000000
+        paramByteDataSize: 0000000000000000000000000000000000000000000000000000000000000000
     - name: DetectLandmark_1
       description: '3. Detect FaceLandmark using DetectLandmark_1 method.
 
@@ -1206,7 +1213,7 @@ MonoBehaviour:
         actionEnabled: 01
         actionIsOpen: 01
         actionStartIndex: 00000000
-        actionHashCodes: 92de7404
+        actionHashCodes: 3df26a04
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -1278,7 +1285,13 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
-        fsmBoolParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
@@ -1292,17 +1305,18 @@ MonoBehaviour:
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 29000000100000001000000017000000170000002700000010000000
+        paramDataType: 2900000010000000100000001700000011000000170000002700000010000000
         paramName:
         - array
         - startIndex
         - endIndex
         - loopEvent
+        - resetFlag
         - finishedEvent
         - result
         - currentIndex
-        paramDataPos: 00000000000000000100000000000000010000000000000002000000
-        paramByteDataSize: 00000000000000000000000000000000000000000000000000000000
+        paramDataPos: 0000000000000000010000000000000000000000010000000000000002000000
+        paramByteDataSize: 0000000000000000000000000000000000000000000000000000000000000000
     - name: DebugPoints
       description: 
       colorIndex: 6
@@ -3482,7 +3496,7 @@ MonoBehaviour:
       isGlobal: 0
     - name: ON_BACKBUTTON_CLICK
       isSystemEvent: 0
-      isGlobal: 1
+      isGlobal: 0
     - name: ON_FILEPATH_CALLBACK
       isSystemEvent: 0
       isGlobal: 0
@@ -3490,7 +3504,7 @@ MonoBehaviour:
     - fsmEvent:
         name: ON_BACKBUTTON_CLICK
         isSystemEvent: 0
-        isGlobal: 1
+        isGlobal: 0
       toState: OnBackButtonClick
       linkStyle: 0
       linkConstraint: 0
@@ -3715,7 +3729,7 @@ MonoBehaviour:
     locked: 0
     manualUpdate: 0
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     RestartOnEnable: 1
     EnableDebugFlow: 0
@@ -3742,7 +3756,10 @@ MonoBehaviour:
     handleJointBreak2D: 0
     handleOnGUI: 0
     handleFixedUpdate: 0
+    handleLateUpdate: 0
     handleApplicationEvents: 0
+    handleUiEvents: 0
+    handleLegacyNetworking: 0
     handleAnimatorMove: 0
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}

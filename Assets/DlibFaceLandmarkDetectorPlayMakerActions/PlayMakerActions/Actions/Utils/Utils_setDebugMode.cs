@@ -1,6 +1,6 @@
 using UnityEngine;
 
-using DlibFaceLandmarkDetector;
+using DlibFaceLandmarkDetector.UnityUtils;
 
 namespace DlibFaceLandmarkDetectorPlayMakerActions
 {

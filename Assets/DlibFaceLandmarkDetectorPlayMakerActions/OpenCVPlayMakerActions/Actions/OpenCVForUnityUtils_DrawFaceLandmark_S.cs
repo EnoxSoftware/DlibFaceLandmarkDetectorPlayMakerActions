@@ -9,13 +9,13 @@ namespace DlibFaceLandmarkDetectorPlayMakerActions
 {
     [HutongGames.PlayMaker.ActionCategory ("DlibFaceLandmarkDetector")]
     [HutongGames.PlayMaker.Tooltip ("public static void DrawFaceLandmark (Mat imgMat, List<Vector2> points, Scalar color, int thickness)")]
-    [HutongGames.PlayMaker.ActionTarget (typeof (OpenCVForUnityPlayMakerActions.Mat), "imgMat")]
-    [HutongGames.PlayMaker.ActionTarget (typeof (HutongGames.PlayMaker.FsmArray), "points")]
-    [HutongGames.PlayMaker.ActionTarget (typeof (HutongGames.PlayMaker.FsmFloat), "color_v0")]
-    [HutongGames.PlayMaker.ActionTarget (typeof (HutongGames.PlayMaker.FsmFloat), "color_v1")]
-    [HutongGames.PlayMaker.ActionTarget (typeof (HutongGames.PlayMaker.FsmFloat), "color_v2")]
-    [HutongGames.PlayMaker.ActionTarget (typeof (HutongGames.PlayMaker.FsmFloat), "color_v3")]
-    [HutongGames.PlayMaker.ActionTarget (typeof (HutongGames.PlayMaker.FsmInt), "thickness")]
+    [HutongGames.PlayMaker.ActionTarget (typeof(OpenCVForUnityPlayMakerActions.Mat), "imgMat")]
+    [HutongGames.PlayMaker.ActionTarget (typeof(HutongGames.PlayMaker.FsmArray), "points")]
+    [HutongGames.PlayMaker.ActionTarget (typeof(HutongGames.PlayMaker.FsmFloat), "color_v0")]
+    [HutongGames.PlayMaker.ActionTarget (typeof(HutongGames.PlayMaker.FsmFloat), "color_v1")]
+    [HutongGames.PlayMaker.ActionTarget (typeof(HutongGames.PlayMaker.FsmFloat), "color_v2")]
+    [HutongGames.PlayMaker.ActionTarget (typeof(HutongGames.PlayMaker.FsmFloat), "color_v3")]
+    [HutongGames.PlayMaker.ActionTarget (typeof(HutongGames.PlayMaker.FsmInt), "thickness")]
     public class OpenCVForUnityUtils_DrawFaceLandmark_S : HutongGames.PlayMaker.FsmStateAction
     {
 
@@ -23,7 +23,7 @@ namespace DlibFaceLandmarkDetectorPlayMakerActions
         [HutongGames.PlayMaker.ActionSection ("[arg1] Mat")]
         [HutongGames.PlayMaker.RequiredField]
         [HutongGames.PlayMaker.UIHint (HutongGames.PlayMaker.UIHint.Variable)]
-        [HutongGames.PlayMaker.ObjectType (typeof (OpenCVForUnityPlayMakerActions.Mat))]
+        [HutongGames.PlayMaker.ObjectType (typeof(OpenCVForUnityPlayMakerActions.Mat))]
         public HutongGames.PlayMaker.FsmObject
             imgMat;
 
@@ -36,22 +36,22 @@ namespace DlibFaceLandmarkDetectorPlayMakerActions
         [HutongGames.PlayMaker.ActionSection ("[arg3] Scalar")]
 
         [HutongGames.PlayMaker.RequiredField]
-        [HutongGames.PlayMaker.ObjectType (typeof (HutongGames.PlayMaker.FsmFloat))]
+        [HutongGames.PlayMaker.ObjectType (typeof(HutongGames.PlayMaker.FsmFloat))]
         public HutongGames.PlayMaker.FsmFloat
             color_v0;
 
         [HutongGames.PlayMaker.RequiredField]
-        [HutongGames.PlayMaker.ObjectType (typeof (HutongGames.PlayMaker.FsmFloat))]
+        [HutongGames.PlayMaker.ObjectType (typeof(HutongGames.PlayMaker.FsmFloat))]
         public HutongGames.PlayMaker.FsmFloat
             color_v1;
 
         [HutongGames.PlayMaker.RequiredField]
-        [HutongGames.PlayMaker.ObjectType (typeof (HutongGames.PlayMaker.FsmFloat))]
+        [HutongGames.PlayMaker.ObjectType (typeof(HutongGames.PlayMaker.FsmFloat))]
         public HutongGames.PlayMaker.FsmFloat
             color_v2;
 
         [HutongGames.PlayMaker.RequiredField]
-        [HutongGames.PlayMaker.ObjectType (typeof (HutongGames.PlayMaker.FsmFloat))]
+        [HutongGames.PlayMaker.ObjectType (typeof(HutongGames.PlayMaker.FsmFloat))]
         public HutongGames.PlayMaker.FsmFloat
             color_v3;
 
@@ -59,7 +59,7 @@ namespace DlibFaceLandmarkDetectorPlayMakerActions
 
         [HutongGames.PlayMaker.ActionSection ("[arg4] int")]
         [HutongGames.PlayMaker.RequiredField]
-        [HutongGames.PlayMaker.ObjectType (typeof (HutongGames.PlayMaker.FsmInt))]
+        [HutongGames.PlayMaker.ObjectType (typeof(HutongGames.PlayMaker.FsmInt))]
         public HutongGames.PlayMaker.FsmInt
             thickness;
 
@@ -87,8 +87,7 @@ namespace DlibFaceLandmarkDetectorPlayMakerActions
         {
             DoProcess ();
 
-            if (!everyFrame)
-            {
+            if (!everyFrame) {
                 Finish ();
             }
         }
@@ -102,23 +101,21 @@ namespace DlibFaceLandmarkDetectorPlayMakerActions
         {
 
 
-            if (!(imgMat.Value is OpenCVForUnityPlayMakerActions.Mat))
-            {
+            if (!(imgMat.Value is OpenCVForUnityPlayMakerActions.Mat)) {
                 LogError ("imgMat is not initialized. Add Action \"newMat\".");
                 return;
             }
-            OpenCVForUnity.Mat wrapped_imgMat = OpenCVForUnityPlayMakerActionsUtils.GetWrappedObject<OpenCVForUnityPlayMakerActions.Mat, OpenCVForUnity.Mat> (imgMat);
+            OpenCVForUnity.CoreModule.Mat wrapped_imgMat = OpenCVForUnityPlayMakerActionsUtils.GetWrappedObject<OpenCVForUnityPlayMakerActions.Mat, OpenCVForUnity.CoreModule.Mat> (imgMat);
 
 
             List<UnityEngine.Vector2> wrapped_points = new List<UnityEngine.Vector2> (points.Length);
-            for (int i = 0; i < points.Length; i++)
-            {
+            for (int i = 0; i < points.Length; i++) {
                 wrapped_points.Add ((Vector2)points.Get (i));
 
             }
 
 
-            OpenCVForUnityUtils.DrawFaceLandmark (wrapped_imgMat, wrapped_points, new OpenCVForUnity.Scalar ((double)color_v0.Value, (double)color_v1.Value, (double)color_v2.Value, (double)color_v3.Value), thickness.Value);
+            OpenCVForUnityUtils.DrawFaceLandmark (wrapped_imgMat, wrapped_points, new OpenCVForUnity.CoreModule.Scalar ((double)color_v0.Value, (double)color_v1.Value, (double)color_v2.Value, (double)color_v3.Value), thickness.Value);
 
         }
 

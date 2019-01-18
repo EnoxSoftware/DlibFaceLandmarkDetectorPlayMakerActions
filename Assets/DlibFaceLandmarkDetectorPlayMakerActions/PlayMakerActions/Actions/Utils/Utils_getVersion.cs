@@ -1,13 +1,13 @@
 using UnityEngine;
 
-using DlibFaceLandmarkDetector;
+using DlibFaceLandmarkDetector.UnityUtils;
 
 namespace DlibFaceLandmarkDetectorPlayMakerActions
 {
 
     [HutongGames.PlayMaker.ActionCategory ("DlibFaceLandmarkDetector")]
     [HutongGames.PlayMaker.Tooltip ("public static string getVersion ()")]
-    [HutongGames.PlayMaker.ActionTarget (typeof (HutongGames.PlayMaker.FsmString), "storeResult")]
+    [HutongGames.PlayMaker.ActionTarget (typeof(HutongGames.PlayMaker.FsmString), "storeResult")]
     public class Utils_getVersion : HutongGames.PlayMaker.FsmStateAction
     {
 
@@ -33,8 +33,7 @@ namespace DlibFaceLandmarkDetectorPlayMakerActions
         {
             DoProcess ();
 
-            if (!everyFrame)
-            {
+            if (!everyFrame) {
                 Finish ();
             }
         }

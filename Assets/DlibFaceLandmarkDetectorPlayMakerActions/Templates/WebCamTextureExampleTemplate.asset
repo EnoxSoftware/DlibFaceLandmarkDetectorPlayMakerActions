@@ -23,8 +23,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1105.96094
-        y: 17.4921875
+        x: 1105.9609
+        y: 17.492188
         width: 163.5
         height: 32
       isBreakpoint: 0
@@ -216,8 +216,8 @@ MonoBehaviour:
       colorIndex: 1
       position:
         serializedVersion: 2
-        x: 1037.55469
-        y: 215.695312
+        x: 1037.5547
+        y: 215.69531
         width: 100
         height: 32
       isBreakpoint: 0
@@ -301,8 +301,8 @@ MonoBehaviour:
       colorIndex: 4
       position:
         serializedVersion: 2
-        x: 1238.55469
-        y: 234.445312
+        x: 1238.5547
+        y: 234.44531
         width: 136
         height: 48
       isBreakpoint: 0
@@ -333,7 +333,7 @@ MonoBehaviour:
         actionEnabled: 01
         actionIsOpen: 01
         actionStartIndex: 00000000
-        actionHashCodes: 92de7404
+        actionHashCodes: 3df26a04
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -405,7 +405,13 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
-        fsmBoolParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
@@ -419,17 +425,18 @@ MonoBehaviour:
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 29000000100000001000000017000000170000002700000010000000
+        paramDataType: 2900000010000000100000001700000011000000170000002700000010000000
         paramName:
         - array
         - startIndex
         - endIndex
         - loopEvent
+        - resetFlag
         - finishedEvent
         - result
         - currentIndex
-        paramDataPos: 00000000000000000100000000000000010000000000000002000000
-        paramByteDataSize: 00000000000000000000000000000000000000000000000000000000
+        paramDataPos: 0000000000000000010000000000000000000000010000000000000002000000
+        paramByteDataSize: 0000000000000000000000000000000000000000000000000000000000000000
     - name: DetectLandmark_1
       description: '3. Detect FaceLandmark using DetectLandmark_1 method.
 
@@ -437,8 +444,8 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 1459.86719
-        y: 355.359375
+        x: 1459.8672
+        y: 355.35938
         width: 277.5
         height: 32
       isBreakpoint: 0
@@ -534,8 +541,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 295.140625
-        y: 598.960938
+        x: 295.14062
+        y: 598.96094
         width: 192
         height: 16
       isBreakpoint: 0
@@ -695,7 +702,7 @@ MonoBehaviour:
         actionEnabled: 01
         actionIsOpen: 01
         actionStartIndex: 00000000
-        actionHashCodes: 92de7404
+        actionHashCodes: 3df26a04
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -767,7 +774,13 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
-        fsmBoolParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
@@ -781,24 +794,25 @@ MonoBehaviour:
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 29000000100000001000000017000000170000002700000010000000
+        paramDataType: 2900000010000000100000001700000011000000170000002700000010000000
         paramName:
         - array
         - startIndex
         - endIndex
         - loopEvent
+        - resetFlag
         - finishedEvent
         - result
         - currentIndex
-        paramDataPos: 00000000000000000100000000000000010000000000000002000000
-        paramByteDataSize: 00000000000000000000000000000000000000000000000000000000
+        paramDataPos: 0000000000000000010000000000000000000000010000000000000002000000
+        paramByteDataSize: 0000000000000000000000000000000000000000000000000000000000000000
     - name: DebugPoints
       description: 
       colorIndex: 6
       position:
         serializedVersion: 2
-        x: 2125.34375
-        y: 397.210938
+        x: 2125.3438
+        y: 397.21094
         width: 103
         height: 32
       isBreakpoint: 0
@@ -867,8 +881,8 @@ MonoBehaviour:
       colorIndex: 4
       position:
         serializedVersion: 2
-        x: 1038.27344
-        y: 516.421875
+        x: 1038.2734
+        y: 516.4219
         width: 177.5
         height: 32
       isBreakpoint: 0
@@ -983,7 +997,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 601.617188
+        x: 601.6172
         y: 0
         width: 400
         height: 32
@@ -1130,7 +1144,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1468.75
-        y: 641.578125
+        y: 641.5781
         width: 243
         height: 32
       isBreakpoint: 0
@@ -1236,7 +1250,7 @@ MonoBehaviour:
       colorIndex: 7
       position:
         serializedVersion: 2
-        x: 291.039062
+        x: 291.03906
         y: 470.25
         width: 192
         height: 32
@@ -1319,7 +1333,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 5.59375
-        y: 110.929688
+        y: 110.92969
         width: 193
         height: 64
       isBreakpoint: 0
@@ -1505,7 +1519,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 276.3125
-        y: 230.328125
+        y: 230.32812
         width: 226
         height: 32
       isBreakpoint: 0
@@ -1759,7 +1773,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 0
-        y: 228.320312
+        y: 228.32031
         width: 222
         height: 32
       isBreakpoint: 0
@@ -2204,7 +2218,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 738.3125
-        y: 201.101562
+        y: 201.10156
         width: 100
         height: 48
       isBreakpoint: 0
@@ -2330,7 +2344,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 736.78125
-        y: 455.984375
+        y: 455.98438
         width: 130
         height: 32
       isBreakpoint: 0
@@ -2393,8 +2407,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 732.640625
-        y: 338.476562
+        x: 732.6406
+        y: 338.47656
         width: 113
         height: 32
       isBreakpoint: 0
@@ -2570,10 +2584,16 @@ MonoBehaviour:
     - name: FALSE
       isSystemEvent: 0
       isGlobal: 0
+    - name: APPLICATION QUIT
+      isSystemEvent: 1
+      isGlobal: 0
+    - name: ON_BACKBUTTON_CLICK
+      isSystemEvent: 0
+      isGlobal: 0
     globalTransitions:
     - fsmEvent:
         name: APPLICATION QUIT
-        isSystemEvent: 0
+        isSystemEvent: 1
         isGlobal: 0
       toState: Dispose
       linkStyle: 0
@@ -2757,7 +2777,7 @@ MonoBehaviour:
     locked: 0
     manualUpdate: 0
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     RestartOnEnable: 1
     EnableDebugFlow: 0
@@ -2784,6 +2804,9 @@ MonoBehaviour:
     handleJointBreak2D: 0
     handleOnGUI: 0
     handleFixedUpdate: 0
+    handleLateUpdate: 0
     handleApplicationEvents: 0
+    handleUiEvents: 0
+    handleLegacyNetworking: 0
     handleAnimatorMove: 0
     handleAnimatorIK: 0

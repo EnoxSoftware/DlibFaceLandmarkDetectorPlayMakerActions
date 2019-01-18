@@ -1,15 +1,15 @@
 using UnityEngine;
 
-using DlibFaceLandmarkDetector;
+using DlibFaceLandmarkDetector.UnityUtils;
 
 namespace DlibFaceLandmarkDetectorPlayMakerActions
 {
 
     [HutongGames.PlayMaker.ActionCategory ("DlibFaceLandmarkDetector")]
     [HutongGames.PlayMaker.Tooltip ("public static string getFilePath (string filepath, bool refresh = false)")]
-    [HutongGames.PlayMaker.ActionTarget (typeof (HutongGames.PlayMaker.FsmString), "filepath")]
-    [HutongGames.PlayMaker.ActionTarget (typeof (HutongGames.PlayMaker.FsmBool), "refresh")]
-    [HutongGames.PlayMaker.ActionTarget (typeof (HutongGames.PlayMaker.FsmString), "storeResult")]
+    [HutongGames.PlayMaker.ActionTarget (typeof(HutongGames.PlayMaker.FsmString), "filepath")]
+    [HutongGames.PlayMaker.ActionTarget (typeof(HutongGames.PlayMaker.FsmBool), "refresh")]
+    [HutongGames.PlayMaker.ActionTarget (typeof(HutongGames.PlayMaker.FsmString), "storeResult")]
     public class Utils_getFilePath : HutongGames.PlayMaker.FsmStateAction
     {
 
@@ -46,8 +46,7 @@ namespace DlibFaceLandmarkDetectorPlayMakerActions
         {
             DoProcess ();
 
-            if (!everyFrame)
-            {
+            if (!everyFrame) {
                 Finish ();
             }
         }

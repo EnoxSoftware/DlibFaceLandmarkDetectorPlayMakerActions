@@ -1,19 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
 --- !u!29 &1
-SceneSettings:
+OcclusionCullingSettings:
   m_ObjectHideFlags: 0
-  m_PVSData: 
-  m_PVSObjectsArray: []
-  m_PVSPortalsArray: []
+  serializedVersion: 2
   m_OcclusionBakeSettings:
     smallestOccluder: 5
     smallestHole: 0.25
     backfaceThreshold: 100
+  m_SceneGUID: 00000000000000000000000000000000
+  m_OcclusionCullingData: {fileID: 0}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 6
+  serializedVersion: 8
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
@@ -25,6 +25,7 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 3
+  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
@@ -37,12 +38,12 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!157 &4
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 6
+  serializedVersion: 9
   m_GIWorkflowMode: 1
-  m_LightmapsMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -53,49 +54,73 @@ LightmapSettings:
     m_EnableBakedLightmaps: 1
     m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
-    serializedVersion: 3
+    serializedVersion: 8
     m_Resolution: 1
     m_BakeResolution: 50
     m_TextureWidth: 1024
     m_TextureHeight: 1024
+    m_AO: 0
     m_AOMaxDistance: 1
-    m_Padding: 2
     m_CompAOExponent: 0
+    m_CompAOExponentDirect: 0
+    m_Padding: 2
     m_LightmapParameters: {fileID: 0}
+    m_LightmapsBakeMode: 1
     m_TextureCompression: 0
     m_FinalGather: 0
+    m_FinalGatherFiltering: 1
     m_FinalGatherRayCount: 1024
     m_ReflectionCompression: 2
+    m_MixedBakeMode: 1
+    m_BakeBackend: 0
+    m_PVRSampling: 1
+    m_PVRDirectSampleCount: 32
+    m_PVRSampleCount: 500
+    m_PVRBounces: 2
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
+    m_PVRFilteringMode: 0
+    m_PVRCulling: 1
+    m_PVRFilteringGaussRadiusDirect: 1
+    m_PVRFilteringGaussRadiusIndirect: 5
+    m_PVRFilteringGaussRadiusAO: 2
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
   m_LightingDataAsset: {fileID: 0}
-  m_RuntimeCPUUsage: 25
+  m_ShadowMaskMode: 2
 --- !u!196 &5
 NavMeshSettings:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_BuildSettings:
     serializedVersion: 2
+    agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
     agentSlope: 45
     agentClimb: 0.4
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
-    accuratePlacement: 0
     minRegionArea: 2
-    cellSize: 0.16666666
     manualCellSize: 0
+    cellSize: 0.16666666
+    manualTileSize: 0
+    tileSize: 256
+    accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
 --- !u!1 &433884704
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100000, guid: 4859e20a6237a7041959573320b6a033, type: 2}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 224: {fileID: 433884705}
-  - 223: {fileID: 433884708}
-  - 114: {fileID: 433884707}
-  - 114: {fileID: 433884706}
+  - component: {fileID: 433884705}
+  - component: {fileID: 433884708}
+  - component: {fileID: 433884707}
+  - component: {fileID: 433884706}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -113,11 +138,11 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 693261578}
   m_Father: {fileID: 0}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -170,7 +195,7 @@ Canvas:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 433884704}
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
@@ -179,6 +204,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -187,10 +213,10 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100002, guid: 4859e20a6237a7041959573320b6a033, type: 2}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 224: {fileID: 693261578}
-  - 114: {fileID: 693261579}
+  - component: {fileID: 693261578}
+  - component: {fileID: 693261579}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -208,11 +234,11 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1542903296}
   m_Father: {fileID: 433884705}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -239,18 +265,20 @@ MonoBehaviour:
   m_Spacing: 10
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
 --- !u!1 &708155495
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 708155500}
-  - 33: {fileID: 708155499}
-  - 64: {fileID: 708155498}
-  - 23: {fileID: 708155497}
-  - 114: {fileID: 708155496}
+  - component: {fileID: 708155500}
+  - component: {fileID: 708155499}
+  - component: {fileID: 708155498}
+  - component: {fileID: 708155497}
+  - component: {fileID: 708155496}
   m_Layer: 0
   m_Name: Quad
   m_TagString: Untagged
@@ -325,8 +353,8 @@ MonoBehaviour:
         - 
         actionEnabled: 010101010101010101010101
         actionIsOpen: 010101010101010101010101
-        actionStartIndex: 000000000100000003000000040000000600000007000000090000000a0000000d0000000e0000001300000014000000
-        actionHashCodes: 78c530013f91fa0178c530015ac8520478c530015ac8520478c53001603dd90578c53001a11aff0078c5300115ecf001
+        actionStartIndex: 0000000001000000040000000500000007000000080000000a0000000b0000000e0000000f0000001400000015000000
+        actionHashCodes: 78c5300127fbe10378c530015ac8520478c530015ac8520478c53001603dd90578c53001a11aff0078c5300115ecf001
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -665,6 +693,12 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 1
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
@@ -683,10 +717,11 @@ MonoBehaviour:
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 0300000011000000010000000300000024000000010000000300000024000000010000000300000010000000100000000100000003000000100000001000000010000000180000000100000003000000210000001800000001000000
+        paramDataType: 030000001100000011000000010000000300000024000000010000000300000024000000010000000300000010000000100000000100000003000000100000001000000010000000180000000100000003000000210000001800000001000000
         paramName:
         - comment
         - debugMode
+        - throwException
         - everyFrame
         - comment
         - targetProperty
@@ -708,8 +743,8 @@ MonoBehaviour:
         - texture2D
         - mat
         - everyFrame
-        paramDataPos: 0000000000000000000000000100000000000000010000000200000001000000020000000300000000000000010000000300000004000000020000000300000004000000000000000400000005000000010000000200000005000000
-        paramByteDataSize: 0000000000000000010000000000000000000000010000000000000000000000010000000000000000000000000000000100000000000000000000000000000000000000000000000100000000000000000000000000000001000000
+        paramDataPos: 000000000000000001000000000000000100000000000000010000000200000001000000020000000300000000000000010000000300000004000000020000000300000004000000000000000400000005000000010000000200000005000000
+        paramByteDataSize: 000000000000000000000000010000000000000000000000010000000000000000000000010000000000000000000000000000000100000000000000000000000000000000000000000000000100000000000000000000000000000001000000
     - name: Dispose
       description: Dispose OpenCVObject
       colorIndex: 0
@@ -913,7 +948,7 @@ MonoBehaviour:
         actionEnabled: 010101010101
         actionIsOpen: 010101010101
         actionStartIndex: 000000000100000008000000090000000c00000011000000
-        actionHashCodes: 78c530011b8a3d0378c5300173d21e057227c6003f91fa01
+        actionHashCodes: 78c530011b8a3d0378c5300173d21e057227c60027fbe103
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -1023,6 +1058,12 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
@@ -1036,7 +1077,7 @@ MonoBehaviour:
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 0300000010000000100000002a000000110000001100000021000000010000000300000018000000210000000100000014000000100000002000000012000000210000001100000001000000
+        paramDataType: 0300000010000000100000002a00000011000000110000002100000001000000030000001800000021000000010000001400000010000000200000001200000021000000110000001100000001000000
         paramName:
         - comment
         - width
@@ -1056,9 +1097,10 @@ MonoBehaviour:
         - namedTexture
         - texture
         - debugMode
+        - throwException
         - everyFrame
-        paramDataPos: 00000000000000000100000000000000000000000100000000000000000000000100000001000000020000000100000000000000020000000300000000000000040000000200000002000000
-        paramByteDataSize: 00000000000000000000000000000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000000000000000000000000000001000000
+        paramDataPos: 0000000000000000010000000000000000000000010000000000000000000000010000000100000002000000010000000000000002000000030000000000000004000000020000000300000002000000
+        paramByteDataSize: 0000000000000000000000000000000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001000000
     - name: Initialize
       description: Initialize FaceLandmarkDetector.
       colorIndex: 0
@@ -1393,7 +1435,7 @@ MonoBehaviour:
         actionEnabled: 01
         actionIsOpen: 01
         actionStartIndex: 00000000
-        actionHashCodes: 92de7404
+        actionHashCodes: 3df26a04
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -1465,7 +1507,13 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
-        fsmBoolParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
@@ -1479,17 +1527,18 @@ MonoBehaviour:
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 29000000100000001000000017000000170000002700000010000000
+        paramDataType: 2900000010000000100000001700000011000000170000002700000010000000
         paramName:
         - array
         - startIndex
         - endIndex
         - loopEvent
+        - resetFlag
         - finishedEvent
         - result
         - currentIndex
-        paramDataPos: 00000000000000000100000000000000010000000000000002000000
-        paramByteDataSize: 00000000000000000000000000000000000000000000000000000000
+        paramDataPos: 0000000000000000010000000000000000000000010000000000000002000000
+        paramByteDataSize: 0000000000000000000000000000000000000000000000000000000000000000
     - name: DetectLandmark_1
       description: Detect FaceLandmark using DetectLandmark_1 method.
       colorIndex: 6
@@ -1624,7 +1673,7 @@ MonoBehaviour:
         actionEnabled: 01
         actionIsOpen: 01
         actionStartIndex: 00000000
-        actionHashCodes: 92de7404
+        actionHashCodes: 3df26a04
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -1696,7 +1745,13 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
-        fsmBoolParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
@@ -1710,17 +1765,18 @@ MonoBehaviour:
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 29000000100000001000000017000000170000002700000010000000
+        paramDataType: 2900000010000000100000001700000011000000170000002700000010000000
         paramName:
         - array
         - startIndex
         - endIndex
         - loopEvent
+        - resetFlag
         - finishedEvent
         - result
         - currentIndex
-        paramDataPos: 00000000000000000100000000000000010000000000000002000000
-        paramByteDataSize: 00000000000000000000000000000000000000000000000000000000
+        paramDataPos: 0000000000000000010000000000000000000000010000000000000002000000
+        paramByteDataSize: 0000000000000000000000000000000000000000000000000000000000000000
     - name: DebugPoints
       description: 
       colorIndex: 6
@@ -3245,8 +3301,8 @@ MonoBehaviour:
         - 
         actionEnabled: 0101010101010101
         actionIsOpen: 0101010101010101
-        actionStartIndex: 00000000040000000a0000000e0000001a0000001e0000002400000028000000
-        actionHashCodes: 352320026d0441002a6e8a00120dad00404de8046d0441002a6e8a00120dad00
+        actionStartIndex: 00000000040000000a0000000e0000001b0000001f0000002500000029000000
+        actionHashCodes: 352320026d0441002a6e8a008546c304404de8046d0441002a6e8a008546c304
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -3487,6 +3543,12 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 1
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         - useVariable: 1
           name: weight_index
           tooltip: 
@@ -3505,6 +3567,12 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 1
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmBoolParams: []
         fsmVector2Params: []
         fsmVector3Params: []
@@ -3539,7 +3607,7 @@ MonoBehaviour:
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 0f0000001200000012000000010000001e0000000f0000000f0000000f0000000f000000010000000f0000000f000000010000000100000018000000120000000f0000000f000000100000000f0000000f0000000f0000000f0000000f0000001000000001000000100000001200000012000000010000001e0000000f0000000f0000000f0000000f000000010000000f0000000f000000010000000100000018000000120000000f0000000f000000100000000f0000000f0000000f0000000f0000000f0000001000000001000000
+        paramDataType: 0f0000001200000012000000010000001e0000000f0000000f0000000f0000000f000000010000000f0000000f000000010000000100000018000000120000000f0000000f000000100000000f0000000f0000000f0000000f0000000f000000100000001000000001000000100000001200000012000000010000001e0000000f0000000f0000000f0000000f000000010000000f0000000f000000010000000100000018000000120000000f0000000f000000100000000f0000000f0000000f0000000f0000000f000000100000001000000001000000
         paramName:
         - floatVariable
         - stringVariable
@@ -3566,6 +3634,7 @@ MonoBehaviour:
         - color_v2
         - color_v3
         - thickness
+        - lineType
         - everyFrame
         - intVariable
         - stringVariable
@@ -3592,9 +3661,10 @@ MonoBehaviour:
         - color_v2
         - color_v3
         - thickness
+        - lineType
         - everyFrame
-        paramDataPos: 00000000000000000100000000000000000000000100000002000000030000000400000001000000050000000600000002000000030000000000000002000000070000000800000000000000090000000a0000000b0000000c0000000d000000010000000400000002000000030000000400000005000000010000000e0000000f000000100000001100000006000000120000001300000007000000080000000100000005000000140000001500000003000000160000001700000018000000190000001a0000000400000009000000
-        paramByteDataSize: 00000000000000000000000001000000000000000000000000000000000000000000000001000000000000000000000001000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000000000000000000000100000000000000000000000100000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
+        paramDataPos: 00000000000000000100000000000000000000000100000002000000030000000400000001000000050000000600000002000000030000000000000002000000070000000800000000000000090000000a0000000b0000000c0000000d00000001000000020000000400000003000000030000000400000005000000010000000e0000000f000000100000001100000006000000120000001300000007000000080000000100000005000000140000001500000004000000160000001700000018000000190000001a000000050000000600000009000000
+        paramByteDataSize: 000000000000000000000000010000000000000000000000000000000000000000000000010000000000000000000000010000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000000000000000000010000000000000000000000010000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -3604,7 +3674,7 @@ MonoBehaviour:
       isGlobal: 0
     - name: ON_BACKBUTTON_CLICK
       isSystemEvent: 0
-      isGlobal: 1
+      isGlobal: 0
     - name: LOOP
       isSystemEvent: 0
       isGlobal: 0
@@ -3624,7 +3694,7 @@ MonoBehaviour:
     - fsmEvent:
         name: ON_BACKBUTTON_CLICK
         isSystemEvent: 0
-        isGlobal: 1
+        isGlobal: 0
       toState: OnBackButtonClick
       linkStyle: 0
       linkConstraint: 0
@@ -3893,7 +3963,10 @@ MonoBehaviour:
     handleJointBreak2D: 0
     handleOnGUI: 0
     handleFixedUpdate: 0
+    handleLateUpdate: 0
     handleApplicationEvents: 0
+    handleUiEvents: 0
+    handleLegacyNetworking: 0
     handleAnimatorMove: 0
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
@@ -3907,22 +3980,28 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 92813c784741e8549b4ccb4ebb9fe7b4, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!64 &708155498
 MeshCollider:
@@ -3935,6 +4014,8 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &708155499
 MeshFilter:
@@ -3952,20 +4033,20 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 512, y: 512, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1105325470
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100004, guid: 4859e20a6237a7041959573320b6a033, type: 2}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 224: {fileID: 1105325471}
-  - 222: {fileID: 1105325473}
-  - 114: {fileID: 1105325472}
+  - component: {fileID: 1105325471}
+  - component: {fileID: 1105325473}
+  - component: {fileID: 1105325472}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -3983,10 +4064,10 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1542903296}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -4038,10 +4119,10 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1453431770}
-  - 114: {fileID: 1453431769}
+  - component: {fileID: 1453431770}
+  - component: {fileID: 1453431769}
   m_Layer: 0
   m_Name: PlayMakerGUI
   m_TagString: Untagged
@@ -4079,22 +4160,22 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1542644386
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1542644391}
-  - 20: {fileID: 1542644390}
-  - 92: {fileID: 1542644389}
-  - 124: {fileID: 1542644388}
-  - 81: {fileID: 1542644387}
+  - component: {fileID: 1542644391}
+  - component: {fileID: 1542644390}
+  - component: {fileID: 1542644389}
+  - component: {fileID: 1542644388}
+  - component: {fileID: 1542644387}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4153,6 +4234,8 @@ Camera:
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 0
+  m_AllowMSAA: 1
+  m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
@@ -4166,22 +4249,22 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1542903291
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100006, guid: 4859e20a6237a7041959573320b6a033, type: 2}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 224: {fileID: 1542903296}
-  - 222: {fileID: 1542903295}
-  - 114: {fileID: 1542903294}
-  - 114: {fileID: 1542903293}
-  - 114: {fileID: 1542903292}
+  - component: {fileID: 1542903296}
+  - component: {fileID: 1542903295}
+  - component: {fileID: 1542903294}
+  - component: {fileID: 1542903293}
+  - component: {fileID: 1542903292}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -4306,11 +4389,11 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1105325471}
   m_Father: {fileID: 693261578}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -4321,12 +4404,12 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100000, guid: 516b0ed7bbe49b54eb11d0acece129f1, type: 2}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1895993193}
-  - 114: {fileID: 1895993192}
-  - 114: {fileID: 1895993191}
-  - 114: {fileID: 1895993190}
+  - component: {fileID: 1895993193}
+  - component: {fileID: 1895993192}
+  - component: {fileID: 1895993191}
+  - component: {fileID: 1895993190}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -4390,7 +4473,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

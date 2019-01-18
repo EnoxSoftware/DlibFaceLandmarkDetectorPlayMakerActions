@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-using DlibFaceLandmarkDetector;
+using DlibFaceLandmarkDetector.UnityUtils;
 
 namespace DlibFaceLandmarkDetectorPlayMakerActions
 {

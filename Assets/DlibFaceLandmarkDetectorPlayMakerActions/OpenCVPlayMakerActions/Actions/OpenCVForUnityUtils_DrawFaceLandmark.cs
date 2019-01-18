@@ -9,10 +9,10 @@ namespace DlibFaceLandmarkDetectorPlayMakerActions
 {
     [HutongGames.PlayMaker.ActionCategory ("DlibFaceLandmarkDetector")]
     [HutongGames.PlayMaker.Tooltip ("public static void DrawFaceLandmark (Mat imgMat, List<Vector2> points, Scalar color, int thickness)")]
-    [HutongGames.PlayMaker.ActionTarget (typeof (OpenCVForUnityPlayMakerActions.Mat), "imgMat")]
-    [HutongGames.PlayMaker.ActionTarget (typeof (HutongGames.PlayMaker.FsmArray), "points")]
-    [HutongGames.PlayMaker.ActionTarget (typeof (OpenCVForUnityPlayMakerActions.Scalar), "color")]
-    [HutongGames.PlayMaker.ActionTarget (typeof (HutongGames.PlayMaker.FsmInt), "thickness")]
+    [HutongGames.PlayMaker.ActionTarget (typeof(OpenCVForUnityPlayMakerActions.Mat), "imgMat")]
+    [HutongGames.PlayMaker.ActionTarget (typeof(HutongGames.PlayMaker.FsmArray), "points")]
+    [HutongGames.PlayMaker.ActionTarget (typeof(OpenCVForUnityPlayMakerActions.Scalar), "color")]
+    [HutongGames.PlayMaker.ActionTarget (typeof(HutongGames.PlayMaker.FsmInt), "thickness")]
     public class OpenCVForUnityUtils_DrawFaceLandmark : HutongGames.PlayMaker.FsmStateAction
     {
 
@@ -20,7 +20,7 @@ namespace DlibFaceLandmarkDetectorPlayMakerActions
         [HutongGames.PlayMaker.ActionSection ("[arg1] Mat")]
         [HutongGames.PlayMaker.RequiredField]
         [HutongGames.PlayMaker.UIHint (HutongGames.PlayMaker.UIHint.Variable)]
-        [HutongGames.PlayMaker.ObjectType (typeof (OpenCVForUnityPlayMakerActions.Mat))]
+        [HutongGames.PlayMaker.ObjectType (typeof(OpenCVForUnityPlayMakerActions.Mat))]
         public HutongGames.PlayMaker.FsmObject
             imgMat;
 
@@ -33,7 +33,7 @@ namespace DlibFaceLandmarkDetectorPlayMakerActions
         [HutongGames.PlayMaker.ActionSection ("[arg3] Scalar")]
         [HutongGames.PlayMaker.RequiredField]
         [HutongGames.PlayMaker.UIHint (HutongGames.PlayMaker.UIHint.Variable)]
-        [HutongGames.PlayMaker.ObjectType (typeof (OpenCVForUnityPlayMakerActions.Scalar))]
+        [HutongGames.PlayMaker.ObjectType (typeof(OpenCVForUnityPlayMakerActions.Scalar))]
         public HutongGames.PlayMaker.FsmObject
             color;
 
@@ -41,7 +41,7 @@ namespace DlibFaceLandmarkDetectorPlayMakerActions
 
         [HutongGames.PlayMaker.ActionSection ("[arg4] int")]
         [HutongGames.PlayMaker.RequiredField]
-        [HutongGames.PlayMaker.ObjectType (typeof (HutongGames.PlayMaker.FsmInt))]
+        [HutongGames.PlayMaker.ObjectType (typeof(HutongGames.PlayMaker.FsmInt))]
         public HutongGames.PlayMaker.FsmInt
             thickness;
 
@@ -66,8 +66,7 @@ namespace DlibFaceLandmarkDetectorPlayMakerActions
         {
             DoProcess ();
 
-            if (!everyFrame)
-            {
+            if (!everyFrame) {
                 Finish ();
             }
         }
@@ -81,23 +80,20 @@ namespace DlibFaceLandmarkDetectorPlayMakerActions
         {
 
 
-            if (!(imgMat.Value is OpenCVForUnityPlayMakerActions.Mat))
-            {
+            if (!(imgMat.Value is OpenCVForUnityPlayMakerActions.Mat)) {
                 LogError ("imgMat is not initialized. Add Action \"newMat\".");
                 return;
             }
-            OpenCVForUnity.Mat wrapped_imgMat = OpenCVForUnityPlayMakerActionsUtils.GetWrappedObject<OpenCVForUnityPlayMakerActions.Mat, OpenCVForUnity.Mat> (imgMat);
+            OpenCVForUnity.CoreModule.Mat wrapped_imgMat = OpenCVForUnityPlayMakerActionsUtils.GetWrappedObject<OpenCVForUnityPlayMakerActions.Mat, OpenCVForUnity.CoreModule.Mat> (imgMat);
 
-            if (!(color.Value is OpenCVForUnityPlayMakerActions.Scalar))
-            {
+            if (!(color.Value is OpenCVForUnityPlayMakerActions.Scalar)) {
                 LogError ("color is not initialized. Add Action \"newScalar\".");
                 return;
             }
-            OpenCVForUnity.Scalar wrapped_color = OpenCVForUnityPlayMakerActionsUtils.GetWrappedObject<OpenCVForUnityPlayMakerActions.Scalar, OpenCVForUnity.Scalar> (color);
+            OpenCVForUnity.CoreModule.Scalar wrapped_color = OpenCVForUnityPlayMakerActionsUtils.GetWrappedObject<OpenCVForUnityPlayMakerActions.Scalar, OpenCVForUnity.CoreModule.Scalar> (color);
 
             List<UnityEngine.Vector2> wrapped_points = new List<UnityEngine.Vector2> (points.Length);
-            for (int i = 0; i < points.Length; i++)
-            {
+            for (int i = 0; i < points.Length; i++) {
                 wrapped_points.Add ((Vector2)points.Get (i));
 
             }
