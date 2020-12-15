@@ -1,0 +1,16 @@
+{
+    "name": "EnoxSoftware.DlibFaceLandmarkDetectorPlayMakerActions",
+    "references": [
+        "EnoxSoftware.DlibFaceLandmarkDetector",
+        "EnoxSoftware.OpenCVForUnity",
+        "EnoxSoftware.OpenCVForUnityPlayMakerActions"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": []
+}
