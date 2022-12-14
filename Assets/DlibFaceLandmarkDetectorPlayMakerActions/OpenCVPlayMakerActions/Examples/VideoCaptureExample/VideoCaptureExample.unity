@@ -4044,7 +4044,7 @@ MonoBehaviour:
         tooltip: 
         showInInspector: 1
         networkSync: 0
-        value: sp_human_face_68.dat
+        value: DlibFaceLandmarkDetector/sp_human_face_68.dat
       - useVariable: 1
         name: shapePredictorFilePath
         tooltip: 
@@ -4056,7 +4056,7 @@ MonoBehaviour:
         tooltip: 
         showInInspector: 1
         networkSync: 0
-        value: dance_mjpeg.mjpeg
+        value: DlibFaceLandmarkDetector/dance_mjpeg.mjpeg
       - useVariable: 1
         name: videoFilePath
         tooltip: 
